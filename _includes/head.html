@@ -1,0 +1,35 @@
+<head>
+  <meta charset=utf-8>
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta name=keywords content="tw-jekyll {{ site.keywords }}">
+  <meta name="ROBOTS" CONTENT="INDEX, FOLLOW">
+  
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/favicons/favicon.ico" >
+  
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:site_name" content="{{ site.url }}" />
+  
+  <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="description" itemprop="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
+  {% if site.logo %}<meta name="twitter:image" content="{{ site.baseurl }}{{ site.logo }}">{% endif %}
+  
+  <meta name=referrer content=origin>
+  <meta name=HandheldFriendly content=True>
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
+  <meta name=msapplication-TileColor content="#4d7cfe">
+  <meta name=theme-color content="#ffffff">
+  <meta property="og:locale" content=en_US>
+  <meta property="og:type" content=article>
+  {% if site.logo %}<meta property="og:image" content="{{ site.baseurl }}{{ site.logo }}">{% endif %}
+  
+  <link rel=stylesheet href="{{ site.baseurl }}/assets/css/main.css" media=all>
+  </head>
+  

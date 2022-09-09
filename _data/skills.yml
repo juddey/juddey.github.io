@@ -1,0 +1,36 @@
+- name:  React Native
+  duration: 5+ years
+  comments:
+    - Built two long-lived React Native apps to support with and tiaki, from versions 0.36 to current.
+  tooling: [websockets, react-native-navigation, apollo-client, mobx-state-tree, redux, react-native-ui-lib, jest,  react-native-testing-library, detox]
+  
+- name: Elixir
+  duration: 4 years
+  comments: 
+    - For all projects, used Phoenix web framework, (v1.2 -> current), first as api only, subsequently migrating to Liveview.
+  tooling: [phoenix, liveview,  absinthe graphql,  channels,  guardian,  verk, wallaby]
+
+- name: Ruby on Rails
+  duration: 2 years
+  comments: 
+    - Created Ruby on Rails 4/5 api only application to support kandid single page AngularJS front end 
+    - Implemented rails unit and capybara feature tests, and deployed through Cloud66 onto DigitalOcean. 
+#           <p class="mt-2.1 text-md text-gray-700 leading-normal">
+#             Additionally, for all applications, I:
+#           </p>
+#           <ul class="mt-4">
+#             <li class="mt-2.1 text-md text-gray-700 leading-normal">
+#               <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
+#               Conducted iterative requirement gathering through interaction with key stakeholders
+#             </li>
+#             <li class="mt-2.1 text-md text-gray-700 leading-normal">
+#               <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
+#               Developed feature, integration and unit tests for all codebases.
+#             </li>
+#           </ul>
+#         </section>
+# 
+# 
+# Additionally, for all applications, I:
+#  Conducted iterative requirement gathering through interaction with key stakeholders
+#  Developed feature, integration and unit tests for all codebases. 

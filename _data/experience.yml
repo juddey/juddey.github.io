@@ -1,0 +1,67 @@
+- company:  Self Employed
+  duration: Jan 2015 - present
+  comment:  "For the last 6 years, I've been self funded, building SaaS solutions using React Native, Elixir, React, and Ruby. During this time, I launched the following applications:"
+  projects: 
+  - name:  with
+    duration: Since 2019
+    comment:  Fundraising and volunteer administration, plus community features such as feeds, news and chat, for churches, charities and other non-profit organisations
+    highlights:
+      - Incorporated Stripe for donations from church members
+      - Implemented Websockets to provide real-time UI
+      - Authenticated posts with text, video and documents
+      - Implemented a full CI/CD pipeline for Elixir and React Native using Gitlab CI
+    links:
+      - title: Apple Store
+        link:  https://withhq.com/apple
+      - title: Google Play
+        link: https://withhq.com/android
+      - title: Landing Site
+        link: https://withhq.com/
+  
+  - name:  tiaki
+    duration: 2017 - 2018
+    comment:  Application and enrolment management, recording learning, and day-to-day administration for Early Childhood Education centres 
+    highlights:
+      - Developed React SPA for administrative users
+      - Built room-based checkin/checkout for children
+  
+  - name:  kandid
+    duration: 2015 - 2016
+    comment:  Candidate management, application filtering and interview to offer processes for developers, employers and recruiters. 
+
+- company: Time Out
+  duration: Jan 2013 = Dec 2014
+  title: Career change
+  activities:
+    -  Self teaching HTML, CSS, JavaScript and Ruby on Rails as part of reskilling with open source programming tools 
+
+
+- company: University of Auckland
+  duration: Mar 2009 - Nov 2012
+  title: Business Analyst (Contract)
+  activities:
+    -  "From Mar 2009 - Oct 2010 - Project Lead for Oracle Campus Solutions Upgrade: Responsible for a team of three subject matter experts and nine product analysts" 
+    -  "Preparation of Business Requirement Documentation, Functional Specifications, and end user liaison"
+  
+
+
+
+#           <p class="mt-2.1 text-md text-gray-700 leading-normal">
+#             Additionally, for all applications, I:
+#           </p>
+#           <ul class="mt-4">
+#             <li class="mt-2.1 text-md text-gray-700 leading-normal">
+#               <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
+#               Conducted iterative requirement gathering through interaction with key stakeholders
+#             </li>
+#             <li class="mt-2.1 text-md text-gray-700 leading-normal">
+#               <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
+#               Developed feature, integration and unit tests for all codebases.
+#             </li>
+#           </ul>
+#         </section>
+# 
+# 
+# Additionally, for all applications, I:
+#  Conducted iterative requirement gathering through interaction with key stakeholders
+#  Developed feature, integration and unit tests for all codebases. 

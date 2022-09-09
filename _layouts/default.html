@@ -9,296 +9,130 @@
     <div class="md:columns-2 print:col-count-2 col-gap-md md:h-a4-col print:h-a4-col col-fill-auto">
       <section class="mt-8 first:mt-0">
         <p class="mb-4 text-sm italic text-gray-700">
-          An independent self-starter, who can mentor, train, and coach others, communicate well, and complete work in
-          a timely and efficient manner.
+          {{ site.resume.intro_paragraph }}
         </p>
         <!-- To keep in the same column -->
         <div class="break-inside-avoid">
           <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
             WORK EXPERIENCE
           </h2>
-          <section class="mb-4.5 break-inside-avoid">
+
+          {% for job in site.data.experience %}
+          <section class="pt-4 break-inside-avoid">
             <header>
               <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                Self Employed
+                {{ job.company }}
               </h3>
               <p class="leading-normal text-md text-gray-650">
-                Jan 2015 - present
+                {{ job.duration }} {% if job.title %} | {{ job.title }} {% endif %}
               </p>
             </header>
-            <p class="mt-2.1 text-md text-gray-700 leading-normal">
-              For the last 6 years, I've been self funded, building SaaS solutions using React Native, Elixir, React,
-              and Ruby. During this time, I launched the following applications:
+            <p class="mt-2 text-md text-gray-700 leading-normal">
+              {{ job.comment}}
             </p>
-          </section>
-          <section class="mb-4.5 break-inside-avoid">
-            <header>
-              <h3 class="text-lg font-semibold text-gray-600 leading-snugish">
-                with
-                </a>
+            {% for project in job.projects %}
+            <section class="pt-2">
+              <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                {{ project.name }}
               </h3>
               <p class="text-sm leading-normal text-gray-650">
-                Since 2019
+                {{ project.duration }}
               </p>
-            </header>
-            <p class="mt-2.1 text-md text-gray-700 leading-normal">
-              Fundraising and volunteer administration, plus community features such as feeds, news and chat, for
-              churches, charities and other non-profit organisations
-            </p>
-            <ul class='mt-2 ml-6 list-disc list-inside'>
-              <li class="leading-normal text-gray-700 text-md">Incorporated Stripe for donations from church members
-              </li>
-              <li class="leading-normal text-gray-700 text-md">Implemented Websockets to provide real-time UI</li>
-              <li class="leading-normal text-gray-700 text-md">Authenticated posts with text, video and documents</li>
-              <li class="leading-normal text-gray-700 text-md">Implemented a full CI/CD pipeline for Elixir and React
-                Native using Gitlab CI.</li>
-            </ul>
-            <p class="mt-2.1 text-md text-gray-700 leading-normal">
-              Online: &bull;
-              <a href="https://withhq.com/apple" class="group">
-                Apple Store
-                <span
-                  class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700">↗</span>
-
-              </a>
-              &bull;
-              <a href="https://withhq.com/android" class="group">
-                Google Play
-                <span
-                  class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700">↗</span>
-
-              </a>
-              &bull;
-              <a href="https://withhq.com" class="group">
-                Landing Site
-                <span
-                  class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700">↗</span>
-
-              </a>
-            </p>
-          </section>
-        </div>
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-semibold text-gray-600 leading-snugish">
-              tiaki
-            </h3>
-            <p class="text-sm leading-normal text-gray-650">
-              2017 - 2018
-            </p>
-          </header>
-          <p class="mt-2.1 text-md text-gray-700 leading-normal">
-            Application and enrolment management, recording learning, and day-to-day administration for Early
-            Childhood Education centres
-          </p>
-          <ul class='mt-2 ml-6 list-disc list-inside'>
-            <li class="leading-normal text-gray-700 text-md">Developed react SPA for administrative users</li>
-            <li class="leading-normal text-gray-700 text-md">Built room-based checkin/checkout for children</li>
-          </ul>
-        </section>
-
-        <section class="mb-4.5 break-inside-avoid">
-          <header>
-            <h3 class="text-lg font-semibold text-gray-600 leading-snugish">
-              kandid
-            </h3>
-            <p class="text-sm leading-normal text-gray-650">
-              2015 - 2016
-            </p>
-          </header>
-          <p class="mt-2.1 text-md text-gray-700 leading-normal">
-            Candidate management, application filtering and interview to offer processes for developers, employers and
-            recruiters.
-          </p>
-          <p class="mt-2.1 text-md text-gray-700 leading-normal">
-            Additionally, for all applications, I:
-          </p>
-          <ul class="mt-4">
-            <li class="mt-2.1 text-md text-gray-700 leading-normal">
-              <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-              Conducted iterative requirement gathering through interaction with key stakeholders
-            </li>
-            <li class="mt-2.1 text-md text-gray-700 leading-normal">
-              <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-              Developed feature, integration and unit tests for all codebases.
-            </li>
-          </ul>
-        </section>
-
-        <section>
-
-          <!-- To keep in the same column -->
-          <div class="break-inside-avoid">
-
-            <section class="mb-4.5 break-inside-avoid">
-              <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                  Time Out
-                </h3>
-                <p class="leading-normal text-md text-gray-650">
-                  Jan 2013 – Dec 2014 | Career change
-                </p>
-              </header>
-              <ul class="">
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                  <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                  Self teaching HTML, CSS, JavaScript and Ruby on Rails as part of reskilling with open source
-                  programming
-                  tools
-                </li>
-                <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                  <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                  Involved in review of
-                  <a href="https://www.manning.com/books/rails-4-in-action" class="group">
-                    Rails 4 in Action
-                    <span
-                      class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700">↗</span>
-                  </a>
-                </li>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal">
+                {{ project.comment}}
+              </p>
+              {% if project.highlights %}
+              <ul class='mt-2 ml-6 list-disc list-inside'>
+                {% for highlight in project.highlights %}
+                <li class="leading-normal text-gray-700 text-md">{{highlight}}</li>
+                {% endfor %}
               </ul>
+              {% endif %}
+              {% if project.links %}
+              <p class="mt-2.1 text-md text-gray-700 leading-normal"></p>
+              Online:
+              {% for link in project.links %}
+              &bull;
+              <a href="{{link.link}}" class="group">
+                {{link.title}}
+                <span
+                  class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700">↗</span>
+              </a>
+              {% endfor %}
+              {% endif %}
             </section>
-          </div>
-          <section class="mb-4.5 break-inside-avoid">
-            <header>
-              <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                University of Auckland
-              </h3>
-              <p class="leading-normal text-md text-gray-650">
-                Mar 2009 – Nov 2012 | Business Analyst (Contract)
-              </p>
-            </header>
+            {% endfor %}
+
             <ul class="">
-              <li class="mt-2.1 text-md text-gray-700 leading-normal">
+              {% for activity in job.activities %}
+              <li class="mt-2 text-md text-gray-700 leading-normal">
                 <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                From Mar 2009 - Oct 2010 - Project Lead for Oracle Campus Solutions Upgrade: Responsible for a team of
-                three subject matter experts and nine product analysts
+                {{ activity }}
               </li>
-              <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                Preparation of Business Requirement Documentation, Functional Specifications, and end user liaison
-              </li>
+              {% endfor %}
             </ul>
           </section>
-          <p class='mt-2 text-sm text-gray-650 mb-4.5'>
-            Prior to 2009, I was a Functional/Techincal Contractor for Oracle Campus Solutions and Human Resource
-            products in New Zealand and Australia.
-          </p>
-        </section>
-
+          {% endfor %}
+      </section>
+      <p class='mt-2 text-sm text-gray-650 mb-4.5'>
+        Prior to 2009, I was a Functional/Techincal Contractor for Oracle Campus Solutions and Human Resource
+        products in New Zealand and Australia.
+      </p>
+      <section>
         <section class="mt-4 first:mt-0">
-
-
           <section class="mt-0 first:mt-0">
 
             <!-- To keep in the same column -->
             <div class="break-inside-avoid">
-
               <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
                 SKILLS
               </h2>
+              {% for skill in site.data.skills %}
+              <section class="mt-4 break-inside-avoid">
+                <header>
+                  <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                    {{ skill.name }}
+                  </h3>
+                  <p class="leading-normal text-md text-gray-650">
+                    {{ skill.duration }}
+                  </p>
+                </header>
+                <ul class="">
+                  {% for comment in skill.comments %}
+                  <li class="mt-2.1 text-md text-gray-700 leading-normal">
+                    <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
+                    {{ comment }}
+                  </li>
+                  {% endfor %}
 
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                    React Native
-                  </h3>
-                  <p class="leading-normal text-md text-gray-650">
-                    5+ years
-                  </p>
-                </header>
-                <ul class="">
+                  {% if skill.tooling %}
                   <li class="mt-2.1 text-md text-gray-700 leading-normal">
                     <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                    Built two long-lived React Native apps to support with and tiaki, from versions 0.36 to current.
+                    Tooling: {% for tool in skill.tooling %} &bull; {{ tool }} {% endfor %}
                   </li>
-
-                  <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                    <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                    Tooling &bull; websockets &bull; react-native-navigation &bull; apollo-client &bull;
-                    mobx-state-tree
-                    &bull; redux
-                    &bull;
-                    react-native-ui-lib &bull; jest &bull; react-native-testing-library &bull; detox
-                  </li>
+                  {% endif %}
                 </ul>
               </section>
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                    Elixir
-                  </h3>
-                  <p class="leading-normal text-md text-gray-650">
-                    4 years
-                  </p>
-                </header>
-                <ul class="">
-                  <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                    <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                    For all projects, used Phoenix web framework, (v1.2 -> current), first as api only, subsequently
-                    migrating to Liveview.
-                  </li>
-                  <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                    <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                    Tooling &bull; phoenix &bull; liveview &bull; absinthe graphql &bull; channels &bull; guardian
-                    &bull; verk &bull; wallaby
-                  </li>
-                </ul>
-              </section>
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                    Ruby on Rails
-                  </h3>
-                  <p class="leading-normal text-md text-gray-650">
-                    2 years
-                  </p>
-                </header>
-                <ul class="">
-                  <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                    <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                    Created Ruby on Rails 4/5 api only application to support kandid single page AngularJS front end
-                  </li>
-                  <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                    <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                    Implemented rails unit and capybara feature tests, and deployed through Cloud66 onto
-                    DigitalOcean.
-                  </li>
-                </ul>
-              </section>
+              {% endfor %}
             </div>
 
-            <section class="mb-4.5 break-inside-avoid">
+            <section class="mt-4 break-inside-avoid">
               <header>
                 <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
                   Other
                 </h3>
               </header>
               <div class="my-3.2 last:pb-1.5">
-                <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                <ul class="flex flex-wrap text-md leading-relaxed">
+                  {% for skill in site.resume.other_skills %}
                   <li
                     class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    JavaScript
+                    {{ skill }}
                   </li>
-                  <li
-                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Git
-                  </li>
-                  <li
-                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Linux
-                  </li>
-                  <li
-                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Ruby
-                  </li>
-                  <li
-                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    React
-                  </li>
+                  {% endfor %}
                 </ul>
               </div>
             </section>
-
           </section>
 
           <section class="mt-8 first:mt-0">
@@ -322,7 +156,7 @@
 
             </div>
             <!-- To keep in the same column -->
-            <div class="">
+            <div class="mt-4">
 
               <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
                 CONTACT
@@ -354,8 +188,6 @@
               </section>
 
             </div>
-
           </section>
-</body>
-
+  </body>
 </html>

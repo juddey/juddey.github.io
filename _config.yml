@@ -39,6 +39,10 @@ postcss:
   cache: false
 port: 4005
 
+resume:
+  intro_paragraph:  An independent self-starter, who can mentor, train, and coach others, communicate well, and complete work in a timely and efficient manner.
+  other_skills: [git, JavaScript, Ruby, React]
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

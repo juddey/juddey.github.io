@@ -42,7 +42,7 @@
                 {{ project.comment}}
               </p>
               {% if project.highlights %}
-              <ul class='mt-2 ml-6 list-disc list-inside'>
+              <ul class='mt-2 ml-6 list-disc list-outside'>
                 {% for highlight in project.highlights %}
                 <li class="leading-normal text-gray-700 text-md">{{highlight}}</li>
                 {% endfor %}
@@ -74,10 +74,7 @@
           </section>
           {% endfor %}
       </section>
-      <p class='mt-2 text-sm text-gray-650 mb-4.5'>
-        Prior to 2009, I was a Functional/Techincal Contractor for Oracle Campus Solutions and Human Resource
-        products in New Zealand and Australia.
-      </p>
+
       <section>
         <section class="mt-4 first:mt-0">
           <section class="mt-0 first:mt-0">
@@ -122,11 +119,11 @@
                   Other
                 </h3>
               </header>
-              <div class="my-3.2 last:pb-1.5">
-                <ul class="flex flex-wrap text-md leading-relaxed">
+              <div class="my-3">
+                <ul>
                   {% for skill in site.resume.other_skills %}
                   <li
-                    class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                    class="inline-flex items-center rounded-full border border-gray-400 px-3 py-1 text-xs font-medium text-gray-700 shadow-sm">
                     {{ skill }}
                   </li>
                   {% endfor %}

@@ -1,3 +1,9 @@
+- company: Alembic Pty Ltd
+  duration: Nov 2021 - present
+  title: Senior Developer (Contract)
+  activities:
+    - Contracted to assist with developing an administrative function for a debit card system using Phoenix Liveview
+
 - company:  Self Employed
   duration: Jan 2015 - present
   comment:  "For the last 6 years, I've been self funded, building SaaS solutions using React Native, Elixir, React, and Ruby. During this time, I launched the following applications:"

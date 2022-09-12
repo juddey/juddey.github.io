@@ -13,7 +13,7 @@
         </p>
         <!-- To keep in the same column -->
         <div class="break-inside-avoid">
-          <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
+          <h2 class="font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
             WORK EXPERIENCE
           </h2>
 
@@ -137,57 +137,11 @@
 
           <section class="mt-8 first:mt-0">
             <!-- To keep in the same column -->
-            <div class="break-inside-avoid">
-
-              <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-                EDUCATION
-              </h2>
-
-              <section class="mb-4.5 break-inside-avoid">
-                <header>
-                  <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                    University of Waikato
-                  </h3>
-                  <p class="leading-normal text-md text-gray-650">
-                    Bachelor of Management Studies (Honours) | 1999
-                  </p>
-                </header>
-              </section>
-
-            </div>
-            <!-- To keep in the same column -->
-            <div class="mt-4">
-
-              <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-                CONTACT
-              </h2>
-
-              <section class="mt-2">
-                <ul class="list-inside pr-7">
-                  <li class="mt-1 leading-normal text-gray-700 text-md">
-                    <a href="//twitter.com/juddeylane" class="group">
-                      twitter.com/juddeylane
-                      <span
-                        class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700">↗</span>
-                    </a>
-                  </li>
-                  <li class="mt-1 leading-normal text-gray-700 text-md">
-                    justin@justinlane.org
-                  </li>
-                  <li class="mt-1 leading-normal text-gray-700 text-md">
-                    (+64) 27 623 6003
-                  </li>
-                  <li class="mt-1 leading-normal text-gray-700 text-md">
-                    <a href="//github.com/juddey" class="group">
-                      github.com/juddey
-                      <span
-                        class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700">↗</span>
-                    </a>
-                  </li>
-                </ul>
-              </section>
-
-            </div>
+            {% include education.html %}
+            {% include contact.html %}
           </section>
+        </section>
+      </section>
+    </div>
   </body>
 </html>

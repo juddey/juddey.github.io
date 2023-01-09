@@ -4,15 +4,15 @@
 
 <body class="w-full h-full">
 
-  <div class="max-w-5xl p-6 mx-auto bg-white page print:max-w-a4 md:max-w-a4 md:h-a4 xsm:p-8 sm:p-9 md:p-16">
+  <div class="max-w-5xl p-6 mx-auto bg-white print:max-w-a4 md:max-w-a4 md:h-a4 xsm:p-8 sm:p-9 md:p-16">
     {% include header.html %}
-    <div class="md:columns-2 print:col-count-2 col-gap-md md:h-a4-col print:h-a4-col col-fill-auto">
-      <section class="mt-8 first:mt-0">
-        <p class="mb-4 text-sm italic text-gray-700">
-          {{ site.resume.intro_paragraph }}
-        </p>
-        <!-- To keep in the same column -->
-        <div class="break-inside-avoid">
+    <div class="columns-1 md:columns-2 gap-4 print:columns-2 md:h-a4-col print:h-a4-col col-fill-auto">
+      <!-- To keep in the same column -->
+        <section class="mt-8 first:mt-0 break-inside-avoid-column">
+          <p class="mb-4 mt-4 text-sm italic text-gray-700">
+            {{ site.resume.intro_paragraph }}
+          </p>
+
           <h2 class="font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
             WORK EXPERIENCE
           </h2>
@@ -53,10 +53,8 @@
               Online:
               {% for link in project.links %}
               &bull;
-              <a href="{{link.link}}" class="group">
+              <a href="{{link.link}}" class="text-md text-gray-700 hover:underline">
                 {{link.title}}
-                <span
-                  class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700">↗</span>
               </a>
               {% endfor %}
               {% endif %}
@@ -73,72 +71,74 @@
             </ul>
           </section>
           {% endfor %}
-      </section>
+        </section>
+      <div class="break-inside-avoid-column">
+        <section>
+          <section class="mt-4 first:mt-0">
+            <section class="mt-0 first:mt-4">
 
-      <section>
-        <section class="mt-4 first:mt-0">
-          <section class="mt-0 first:mt-0">
+              <!-- To keep in the same column -->
+              <div class="break-inside-avoid">
+                <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
+                  SKILLS
+                </h2>
+                {% for skill in site.data.skills %}
+                <section class="mt-4 break-inside-avoid">
+                  <header>
+                    <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                      {{ skill.name }}
+                    </h3>
+                    <p class="leading-normal text-md text-gray-650">
+                      {{ skill.duration }}
+                    </p>
+                  </header>
+                  <ul class="">
+                    {% for comment in skill.comments %}
+                    <li class="mt-2.1 text-md text-gray-700 leading-normal">
+                      <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
+                      {{ comment }}
+                    </li>
+                    {% endfor %}
 
-            <!-- To keep in the same column -->
-            <div class="break-inside-avoid">
-              <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal">
-                SKILLS
-              </h2>
-              {% for skill in site.data.skills %}
+                    {% if skill.tooling %}
+                    <li class="mt-2.1 text-md text-gray-700 leading-normal">
+                      <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
+                      Tooling: {% for tool in skill.tooling %} &bull; {{ tool }} {% endfor %}
+                    </li>
+                    {% endif %}
+                  </ul>
+                </section>
+                {% endfor %}
+              </div>
+
               <section class="mt-4 break-inside-avoid">
                 <header>
                   <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                    {{ skill.name }}
+                    Other
                   </h3>
-                  <p class="leading-normal text-md text-gray-650">
-                    {{ skill.duration }}
-                  </p>
                 </header>
-                <ul class="">
-                  {% for comment in skill.comments %}
-                  <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                    <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                    {{ comment }}
-                  </li>
-                  {% endfor %}
-
-                  {% if skill.tooling %}
-                  <li class="mt-2.1 text-md text-gray-700 leading-normal">
-                    <span class="absolute -ml-3 sm:-ml-3.2 select-none transform -translate-y-px">›</span>
-                    Tooling: {% for tool in skill.tooling %} &bull; {{ tool }} {% endfor %}
-                  </li>
-                  {% endif %}
-                </ul>
+                <div class="my-3">
+                  <ul>
+                    {% for skill in site.resume.other_skills %}
+                    <li
+                      class="inline-flex items-center rounded-full border border-gray-400 px-3 py-1 text-xs font-medium text-gray-700 shadow-sm">
+                      {{ skill }}
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
               </section>
-              {% endfor %}
-            </div>
+            </section>
 
-            <section class="mt-4 break-inside-avoid">
-              <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                  Other
-                </h3>
-              </header>
-              <div class="my-3">
-                <ul>
-                  {% for skill in site.resume.other_skills %}
-                  <li
-                    class="inline-flex items-center rounded-full border border-gray-400 px-3 py-1 text-xs font-medium text-gray-700 shadow-sm">
-                    {{ skill }}
-                  </li>
-                  {% endfor %}
-                </ul>
-              </div>
+            <section class="mt-8 first:mt-0">
+              <!-- To keep in the same column -->
+              {% include education.html %}
+              {% include contact.html %}
             </section>
           </section>
-
-          <section class="mt-8 first:mt-0">
-            <!-- To keep in the same column -->
-            {% include education.html %}
-            {% include contact.html %}
-          </section>
         </section>
-      </section>
+      </div>
     </div>
-  </body>
+</body>
+
 </html>

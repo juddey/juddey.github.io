@@ -2,7 +2,9 @@
   duration: Nov 2021 - present
   title: Senior Developer (Contract)
   activities:
-    - Contracted to assist with developing an administrative function for a debit card system using Phoenix Liveview
+    - Contracted to assist with developing an administrative function for a debit card system using Phoenix LiveView, Event Sourcing and Absinthe GraphQL
+    - Authored React/NextJS based frontend features and bug fixes
+    - Elicited, captured, clarified and documented stakeholder requirements
 
 - company:  Self Employed
   duration: Jan 2015 - present

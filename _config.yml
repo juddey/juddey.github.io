@@ -20,7 +20,7 @@
 
 domain: juddey.github.io       
 url: https://juddey.github.io 
-baseurl: "https://juddey.github.io"
+baseurl: "juddey.github.io"
 title: Justin Lane - Resume
 email: justin at justinlane dot org
 description: >- # this means to ignore newlines until "baseurl:"
